@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  Animated,
-  Dimensions,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View
-} from "react-native";
+import {Animated,Dimensions,StyleSheet,Text,TouchableHighlight,View} from "react-native";
 import { ListItem, Icon } from "react-native-elements";
 
 import { SwipeListView } from "react-native-swipe-list-view";
@@ -43,7 +36,7 @@ export default class SwipeableFlatlist extends Component {
   renderItem = data => (
    
       <ListItem
-        leftElement={<Icon name="book" type="font-awesome" color="#696969" />}
+        
         title={data.item.book_name}
         titleStyle={{ color: "black", fontWeight: "bold" }}
         subtitle={data.item.message}
