@@ -48,7 +48,7 @@ export default class SwipeableFlatlist extends Component {
   renderHiddenItem = () => (
     <View style={styles.rowBack}>
       <View style={[styles.backRightBtn, styles.backRightBtnRight]}>
-        <Text style={styles.backTextWhite}>Mark as read</Text>
+        <Text style={styles.backTextWhite}></Text>
       </View>
     </View>
   );
