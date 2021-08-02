@@ -66,7 +66,7 @@ export default class SwipeableFlatlist extends Component {
           previewOpenValue={-40}
           previewOpenDelay={3000}
           onSwipeValueChange={this.onSwipeValueChange}
-          keyExtractor={(item, index) => index.toString()}
+          
         />
       </View>
     );
