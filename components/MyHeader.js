@@ -2,11 +2,13 @@ import React, { Component} from 'react';
 import { Header,Icon,Badge } from 'react-native-elements';
 import { View, Text, StyleSheet} from 'react-native';
 import db from '../config'
+import Firebase from 'firebase'
 
 export default class MyHeader extends Component{
   constructor(props){
     super(props)
     this.state= {
+      userId: firebase.auth().currentUser.email
       value:""
     }
   }
@@ -29,7 +31,7 @@ BellIconWithBadge =()=>{
   return(
     <View>
       <Icon name ='bell' type='font-awesome' color='#696969' size={25}
-      onPress = {()=> props.navigation.navigate('Notification')}/>
+      onPress = {()=> this.props.navigation.navigate('Notification')}/>
       <Badge
       value = {this.state.value}
       containerStyle={{position:'absoulte', top: -4, right: -4 }}/>
